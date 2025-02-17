@@ -12,12 +12,10 @@
     from {
       transform: translateX(100%);
       opacity: 0;
-      visibility: visible;
     }
     to {
       transform: translateX(0);
       opacity: 1;
-      visibility: visible;
     }
   }
   
@@ -36,7 +34,7 @@
     animation-delay: 1s;
     animation-fill-mode: forwards; 
     opacity: 0; 
-    visibility: hidden; 
+  
   }
 
 .cookies_part {
