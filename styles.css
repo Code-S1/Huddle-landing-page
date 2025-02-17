@@ -8,6 +8,88 @@
     box-sizing: border-box;
 }
 
+@keyframes slideInRightToLeft {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: visible;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .popup {
+    background-color: rgb(255, 255, 255);
+    max-width: 20rem;
+    position: fixed;
+    z-index: 999999999;
+    right: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    bottom: 0;
+    margin: 0 1rem 1rem 0;
+    border: 1px solid black;
+    animation: slideInRightToLeft 500ms cubic-bezier(0.18, 0.02, 0.1, 0.99);
+    animation-delay: 1s;
+    animation-fill-mode: forwards; 
+    opacity: 0; 
+    visibility: hidden; 
+  }
+
+.cookies_part {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup p {
+    padding: 1rem 0;
+}
+
+.button_accept {
+    margin-right: 1rem;
+    background-color: rgb(30, 134, 253);
+    transition: opacity 200ms;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.reject_button {
+    background-color: rgb(30, 134, 253);
+    transition: opacity 200ms;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.cross_popup {
+    cursor: pointer;
+}
+
 .main_upper_part {
     background-image: url('images/bg-hero-mobile.svg');
     background-repeat: no-repeat;
@@ -250,6 +332,22 @@ a {
 }
 
 @media (min-width:550px) {
+
+    .button_accept,
+    .reject_button {
+        padding: .7rem 1.5rem;
+        font-size: .9rem;
+        border-radius: .4rem;
+    }
+
+    .popup p {
+        padding: 1.5rem 0;
+    }
+
+    .popup {
+        max-width: 25rem;
+    }
+
     .menu_icon {
         display: none;
     }
@@ -301,11 +399,17 @@ a {
 }
 
 @media (min-width:800px) {
+    .popup {padding: 1.8rem 1.3rem;
+        margin: 0 2rem 2rem 0;
+        max-width: 30rem;
+    }
+
     .tab_n_pc_nav li {
         font-size: 1.05rem;
         padding-left: 2rem;
     }
-    .navigation{
+
+    .navigation {
         padding-top: 3rem;
     }
 
@@ -317,22 +421,23 @@ a {
 
     .pc_flex {
         display: flex;
-        
-                justify-content: space-around;
-                margin: 4rem auto 0 auto;
-                align-items: center;
-              
-                max-width: 75rem;
+
+        justify-content: space-around;
+        margin: 4rem auto 0 auto;
+        align-items: center;
+
+        max-width: 75rem;
     }
 
     .left {
-      
+
         text-align: left;
         margin: unset;
         align-items: start;
         display: flex;
         justify-content: center;
-        flex-direction: column;max-width: 50rem;
+        flex-direction: column;
+        max-width: 50rem;
 
     }
 
@@ -340,15 +445,18 @@ a {
         font-size: 2rem;
         text-align: left;
         padding: 0 1rem;
-        margin: 0;max-width: 70%;
+        margin: 0;
+        max-width: 70%;
     }
 
     .huddle_text {
         text-align: left;
-        padding: 1.6rem 1rem;max-width: 70%;
+        padding: 1.6rem 1rem;
+        max-width: 70%;
         font-size: 1rem;
     }
-    .lol{
+
+    .lol {
         max-width: 80rem;
         margin: 0 auto;
     }
@@ -401,11 +509,11 @@ a {
 
     .bottom {
         display: flex;
-        
-                align-items: center;
-                justify-content: space-between;
-                max-width: 80rem;
-                margin: -4rem auto 0 auto;
+
+        align-items: center;
+        justify-content: space-between;
+        max-width: 80rem;
+        margin: -4rem auto 0 auto;
 
     }
 
@@ -435,7 +543,8 @@ a {
         text-align: right;
         padding: 2rem 1rem 2rem 0;
     }
-    .image{
+
+    .image {
         max-width: 40rem;
         display: flex;
         justify-content: center;

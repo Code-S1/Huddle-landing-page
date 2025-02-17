@@ -9,6 +9,14 @@
 <link rel="stylesheet" href="styles.css">
 
 <body>
+  <section class="popup">
+    <div class="cookies_part">
+      <h1>Cookies popup</h1><img onclick="cancelButton()" class="cross_popup" src="real close.svg" height="24px" alt="cross">
+    </div>
+    <p>I won't appear again if you reload the page. It's because I used local storage magic.</p>
+    <div class="buttons">
+    <button class="button_accept">Accept Cookies</button><button class="reject_button">Reject Cookies</button></div>
+  </section>
   <section class="main_upper_part">
     <nav class="navigation">
       <div class="huddle_image">
@@ -39,12 +47,12 @@
     </nav>
     <div class="pc_flex">
       <div class="left">
-      <h1 class="community_heading">Build The Community Your Fans Will Love</h1>
-      <p class="huddle_text">Huddle re-imagines the way we build communities. You have a voice, but so does your
-        audience.
-        Create connections
-        with your users as you engage in genuine discussion.</p>
-      <button class="free_button">Get Started For Free</button>
+        <h1 class="community_heading">Build The Community Your Fans Will Love</h1>
+        <p class="huddle_text">Huddle re-imagines the way we build communities. You have a voice, but so does your
+          audience.
+          Create connections
+          with your users as you engage in genuine discussion.</p>
+        <button class="free_button">Get Started For Free</button>
       </div>
       <div class="image">
         <img src="images\illustration-mockups.svg" alt="a mockup image pc">
@@ -53,35 +61,39 @@
     </div>
   </section>
   <div class="flex_for_main">
-  <section class=" g">
-    <div class="section_two_image">
-      <img src="images\illustration-grow-together.svg" alt="a guy and a women discussing something important">
-    </div>
-    <div class="user">
-    <h1 class="h ">Grow Together</h1>
-    <p class="main_text_of_section_two">Generate meaningful discussions with your audience and build a strong, loyal
-      community. Think of the insightful conversations you miss out on with a feedback form.</p></div>
-  </section>
-  <section class="n g">
-    <div class="section_two_image">
-      <img src="images\illustration-flowing-conversation.svg"
-        alt="some people having a good time chatting to one another">
-    </div>
-    <div class="user">
-    <h1 class="h ">Flowing Conversations</h1>
-    <p class="main_text_of_section_two">You wouldn't paginate a conversation in real life, so why do it online? Our
-      threads have just-in-time loading for a more natural flow.</p></div>
-  </section>
-  <section class=" g">
-    <div class="section_two_image">
-      <img class="people_sitting_image" src="images\illustration-your-users.svg" alt="people looking like they are hanging some pictures">
-    </div>
-    <div class="user">
-    <h1 class="h">Your Users</h1>
-    <p class="main_text_of_section_two">It takes no time at all to integrate Huddle with your app's authentication
-      solution. This means, once signed in to your app, your users can start chatting immediately.</p></div>
-  </section>
-</div>
+    <section class=" g">
+      <div class="section_two_image">
+        <img src="images\illustration-grow-together.svg" alt="a guy and a women discussing something important">
+      </div>
+      <div class="user">
+        <h1 class="h ">Grow Together</h1>
+        <p class="main_text_of_section_two">Generate meaningful discussions with your audience and build a strong, loyal
+          community. Think of the insightful conversations you miss out on with a feedback form.</p>
+      </div>
+    </section>
+    <section class="n g">
+      <div class="section_two_image">
+        <img src="images\illustration-flowing-conversation.svg"
+          alt="some people having a good time chatting to one another">
+      </div>
+      <div class="user">
+        <h1 class="h ">Flowing Conversations</h1>
+        <p class="main_text_of_section_two">You wouldn't paginate a conversation in real life, so why do it online? Our
+          threads have just-in-time loading for a more natural flow.</p>
+      </div>
+    </section>
+    <section class=" g">
+      <div class="section_two_image">
+        <img class="people_sitting_image" src="images\illustration-your-users.svg"
+          alt="people looking like they are hanging some pictures">
+      </div>
+      <div class="user">
+        <h1 class="h">Your Users</h1>
+        <p class="main_text_of_section_two">It takes no time at all to integrate Huddle with your app's authentication
+          solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+      </div>
+    </section>
+  </div>
   <footer class="footer">
     <div class="ready">
       <h1 class="ready_heading">Ready to build your Community?</h1>
@@ -115,13 +127,18 @@
       <div class="svgs"><img src="images\icon-email.svg" alt="email"><img src="images\icon-location.svg"
           alt="location"><img src="images\icon-phone.svg" alt="phone"></div>
       <p class="copyright">©Copyright 2018 Huddle. All rights reserved.</p>
-    </section> 
-    <div class="lol"><p class="copyright_two">©Copyright 2018 Huddle. All rights reserved.</p></div>
+    </section>
+    <div class="lol">
+      <p class="copyright_two">©Copyright 2018 Huddle. All rights reserved.</p>
+    </div>
   </footer>
 
 
 </body>
 <script>
+  function cancelButton(){
+    document.querySelector('.popup').style.display = 'none'
+  }
   function openMenu() {
     document.querySelector('.the_opening_menu').style.display = 'flex';
     document.querySelector('.navigation').style.alignItems = 'flex-start';
